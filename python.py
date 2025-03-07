@@ -8,7 +8,7 @@ def stuff(n):
     index = 1
     while index <= n:
         space = Coefficient * " "
-        print(space+(symbol*count))
+        return space+(symbol*count)
         Coefficient-=1
         count+=2
         index+=1
