@@ -1,3 +1,5 @@
+path="/home/javande/file10"
+
 def stuff(n):
     count = 2
     symbol = "*"
@@ -9,4 +11,6 @@ def stuff(n):
         Coefficient-=1
         count+=2
         index+=1
-stuff(20)
+
+with open(path , "w") as x :
+    x.write(stuff(20))
