@@ -12,6 +12,3 @@ def stuff(n):
         Coefficient-=1
         count+=2
         index+=1
-
-with open(path , "w") as x :
-    x.write(stuff(20))
