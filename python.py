@@ -1,7 +1,7 @@
 # my python script
 def stuff(n):
     count = 2
-    symbol = "*"
+    symbol = "$"
     Coefficient = 19
     index = 1
     while index <= n:
