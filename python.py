@@ -1,6 +1,3 @@
-path="/var/lib/jenkins/workspace/my_python_Job/file10"
-
-print(path)
 def stuff(n):
     count = 2
     symbol = "*"
