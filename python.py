@@ -1,4 +1,4 @@
-path="/var/lib/jenkins/workspace/my_python_job/file10"
+path="/var/lib/jenkins/workspace/my_python_Job/file10"
 
 print(path)
 def stuff(n):
