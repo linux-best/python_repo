@@ -5,4 +5,4 @@ logger.add(path ,
            level="DEBUG"
 )
 
-logger.info("the Build just execute")
+logger.info("Build Execute")
