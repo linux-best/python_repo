@@ -1,4 +1,4 @@
-# my python script
+# my python script #
 def stuff(n):
     count = 2
     symbol = "$"
