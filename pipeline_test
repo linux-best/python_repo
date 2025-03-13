@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh '''
-                echo "Updating....." >> /var/lib/jenkins/workspace/my_python_job/file10
+                echo "Updating....." >> /var/lib/jenkins/workspace/my_python_Job/file10
                 '''
             }
         }
