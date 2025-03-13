@@ -7,7 +7,6 @@ pipeline {
                 echo 'Building..'
                 sh '''
                 echo "Updating....." >> /var/lib/jenkins/workspace/my_first_pipeline/file_log
-
                 '''
             }
         }
