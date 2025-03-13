@@ -6,18 +6,24 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh '''
-                echo "Updating....." >> /var/lib/jenkins/workspace/my_python_Job/file10
+                echo "Building....." >> /var/lib/jenkins/workspace/my_first_pipeline/file_log
                 '''
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+		sh '''
+		echo "Testing....." >> /var/lib/jenkins/workspace/my_first_pipeline/file_log
+		'''
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+		sh '''
+		echo "Deploying....." >> /var/lib/jenkins/workspace/my_first_pipeline/file_log
+		'''
             }
         }
     }
