@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh '''
-                echo "Building....." >> /var/lib/jenkins/workspace/my_first_pipeline/file_log
+                echo "Building..... $(date)" >> /var/lib/jenkins/workspace/my_first_pipeline/file_log
                 '''
             }
         }
