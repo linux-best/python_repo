@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh '''
-                echo "Building..... $(date)" >> /home/$USER/jenkins_slave/my_first_pipeline/file_log
+                echo "Building..... $(date)" >> /home/$USER/jenkins_slave/workspace/my_first_pipeline/file_log
                 '''
             }
         }
@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Testing..'
 		sh '''
-		echo "Testing....." >> /home/$USER/jenkins_slave/my_first_pipeline/file_log
+		echo "Testing....." >> /home/$USER/jenkins_slave/workspace/my_first_pipeline/file_log
 		'''
             }
         }
@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
 		sh '''
-		echo "Deploying....." >> /home/$USER/jenkins_slave/my_first_pipeline/file_log
+		echo "Deploying....." >> /home/$USER/jenkins_slave/workspace/my_first_pipeline/file_log
 		'''
             }
         }
