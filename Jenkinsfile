@@ -7,7 +7,7 @@ pipeline {
         sh '''
         cd ~
         cd ansible/playbooks/
-        ansible_playbook playbook_ansible.yml
+        ansible-playbook playbook_ansible.yml
         '''
       }
     }
