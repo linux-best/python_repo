@@ -17,7 +17,7 @@ pipeline {
         sh """
         cd ~
         cd repo_project/python_repo/
-        python3 python_1.py >> file10
+        python3 log_Msg.py >> file10
         """
       }
     }
