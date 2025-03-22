@@ -17,14 +17,14 @@ pipeline {
         sh """
         cd ~
         cd repo_projects/python_repo/
-        python3 log_Msg.py >> file10
+        python3 log_Msg.py >> file_log
         """
       }
     }
   }
   post {
     success {
-      echo "Done !"
+      echo "Done !" >> file_log
     }
   }
 }
