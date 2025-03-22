@@ -24,7 +24,7 @@ pipeline {
   }
   post {
     success {
-      echo "Done !" >> file_log
+      echo "Done !"
     }
   }
 }
