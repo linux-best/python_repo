@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('checkout stage') {
+    stage('execute stage') {
       steps {
         echo "running ansible playbook"
         sh '''
@@ -10,6 +10,21 @@ pipeline {
         ansible-playbook playbook_ansible.yml
         '''
       }
+    }
+    stage('logging stage') {
+      steps {
+        echo "sending a log_Msg"
+        sh """
+        cd ~
+        cd workspace/my_python_job/
+        python3 python_1.py >> file10
+        """
+      }
+    }
+  }
+  post {
+    success {
+      echo "Done !"
     }
   }
 }
