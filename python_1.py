@@ -6,5 +6,5 @@ logger.add(path ,
            format="<yellow>{time: MMMM D, YYYY - HH:mm:ss}</yellow> -- <green>{level}</green> -- <level>{message}</level> {extra}",
            level="DEBUG"
 )
-
-logger.success("Build Execute !")
+with logger.contextualize(log=True):
+           logger.success("Build Execute !")
