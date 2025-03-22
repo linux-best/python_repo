@@ -16,7 +16,7 @@ pipeline {
         echo "sending a log_Msg"
         sh """
         cd ~
-        cd repo_projects/python_repo/
+        cd workspace/my_python_Job/
         python3 log_Msg.py >> file_log
         """
       }
