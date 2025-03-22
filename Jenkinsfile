@@ -17,7 +17,7 @@ pipeline {
         sh """
         cd ~
         cd repo_projects/python_repo/
-        python3 log_Msg.py >> /var/lib/jenkins/workspace/python_repo/file_log
+        python3 log_Msg.py >> /var/lib/jenkins/workspace/my_python_job/file_log
         """
       }
     }
