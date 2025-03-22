@@ -6,7 +6,7 @@ pipeline {
         echo "running ansible playbook"
         sh '''
         cd ~
-        cd repo_project/ansible/playbooks/
+        cd repo_projects/ansible/playbooks/
         ansible-playbook playbook_ansible.yml
         '''
       }
@@ -16,7 +16,7 @@ pipeline {
         echo "sending a log_Msg"
         sh """
         cd ~
-        cd repo_project/python_repo/
+        cd repo_projects/python_repo/
         python3 log_Msg.py >> file10
         """
       }
