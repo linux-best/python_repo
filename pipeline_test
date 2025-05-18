@@ -3,17 +3,13 @@ pipeline {
         node {
             label 'slave'
             }
-     }
-    environment {
-	PATH = "/home/$USER/jenkins_slave/workspace/my_first_pipeline/file_log"
-    }
 
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
                 sh '''
-                echo "Building..... $(date)" >> ${env.PATH}
+                echo "Building..... $(date)" >> /home/$USER/jenkins_slave/workspace/my_first_pipeline/file_log
                 '''
             }
         }
@@ -21,7 +17,7 @@ pipeline {
             steps {
                 echo 'Testing..'
 		sh '''
-		echo "Testing....." >> ${env.PATH}
+		echo "Testing....." >> /home/$USER/jenkins_slave/workspace/my_first_pipeline/file_log
 		'''
             }
         }
@@ -29,7 +25,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
 		sh '''
-		echo "Deploying....." >> ${env.PATH}
+		echo "Deploying....." >> /home/$USER/jenkins_slave/workspace/my_first_pipeline/file_log
 		'''
             }
         }
