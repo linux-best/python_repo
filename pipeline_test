@@ -4,13 +4,16 @@ pipeline {
             label 'slave'
             }
      }
+    environment {
+	PATH = "/home/$USER/jenkins_slave/workspace/my_first_pipeline/file_log"
+    }
 
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
                 sh '''
-                echo "Building..... $(date)" >> /home/$USER/jenkins_slave/workspace/my_first_pipeline/file_log
+                echo "Building..... $(date)" >> ${env.PATH}
                 '''
             }
         }
@@ -18,7 +21,7 @@ pipeline {
             steps {
                 echo 'Testing..'
 		sh '''
-		echo "Testing....." >> /home/$USER/jenkins_slave/workspace/my_first_pipeline/file_log
+		echo "Testing....." >> ${env.PATH}
 		'''
             }
         }
@@ -26,7 +29,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
 		sh '''
-		echo "Deploying....." >> /home/$USER/jenkins_slave/workspace/my_first_pipeline/file_log
+		echo "Deploying....." >> ${env.PATH}
 		'''
             }
         }
