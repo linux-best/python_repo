@@ -1,5 +1,5 @@
 git diff --exit-code
-if [$? == 0]
+if [ $? == 0 ]
 then
 	echo "there is no changes"
 else
