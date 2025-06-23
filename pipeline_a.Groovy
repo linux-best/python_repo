@@ -1,21 +1,6 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Init') {
-            steps {
-                echo "Initializing......"
-                script {
-                    def pr = load "pipeline_b.Groovy"
-                }
-            }
-        }
-        stage('Build') {
-            steps {
-                script {
-                    pr.testapp()
-                }
-            }
-        }
-    }
+node {
+    def rootDir = pwd()
+    def exampleModule = load "${rootDir}@script/Example.Groovy "
+    exampleModule.exampleMethod()
+    exampleModule.otherExampleMethod()
 }

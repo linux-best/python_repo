@@ -1,9 +1,9 @@
-def testapp() {
-    echo "Testing the application......"
-    echo "installing the app in 1.2  version"
-    sh '''
-    echo "doing test command.."
-    '''
+def exampleMethod() {
+    echo "hello"
 }
 
+def otherExampleMethod() {
+    echo "hello"
+}
 return this
+
