@@ -1,4 +1,3 @@
-def gv
 pipeline {
     agent any
 
@@ -7,7 +6,7 @@ pipeline {
             steps {
                 echo "Initializing......"
                 script {
-                    def pr = load "pipeline_b"
+                    def pr = load "pipeline_b.Groovy"
                 }
             }
         }
