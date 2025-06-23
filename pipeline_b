@@ -5,3 +5,5 @@ def testapp() {
     echo "doing test command.."
     '''
 }
+
+return this
