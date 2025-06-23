@@ -1,0 +1,22 @@
+def gv
+pipeline {
+    agent any
+
+    stages {
+        stage('Init') {
+            steps {
+                echo "Initializing......"
+                script {
+                    def gv = load "pipeline_b"
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                script {
+                    gv.testapp()
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+def testapp() {
+    echo "Testing the application......"
+    echo "installing the app in ${new_version} version"
+    sh '''
+    echo "doing test command.."
+    '''
+}
