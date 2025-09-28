@@ -9,3 +9,5 @@ RUN pip3 install --no-cache-dir -r requierments.txt
 COPY app/ .
 
 CMD [ "python3","application.py"]
+
+
